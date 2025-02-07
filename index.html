@@ -13,7 +13,6 @@
         }
         body {
             font-family: 'Arial', sans-serif;
-            overflow-x: hidden;
         }
 
         /* Navbar */
@@ -28,7 +27,16 @@
             background: transparent;
             z-index: 100;
         }
-        .navbar .logo {
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo-container .logo-text {
             font-size: 24px;
             font-weight: bold;
             color: white;
@@ -45,10 +53,15 @@
             color: white;
             font-size: 16px;
         }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
         .nav-icons a {
             color: white;
             font-size: 18px;
             margin-left: 15px;
+            text-decoration: none;
         }
 
         /* Hero Section */
@@ -96,31 +109,26 @@
             background: white;
             color: black;
         }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            .cta-buttons .btn {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- Header with Navigation Bar -->
     <header>
         <nav class="navbar">
-            <div class="logo">Optivision</div>
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Optivision Logo">
+                <span class="logo-text">Optivision</span>
+            </div>
+            <!-- Navigation Links -->
             <ul class="nav-links">
                 <li><a href="store.html">Sunglasses</a></li>
                 <li><a href="store.html">Glasses</a></li>
-                <li><a href="#styles">Styles</a></li>
-                <li><a href="#stories">Stories</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#Rewards">Rewards</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <!-- Navigation Icons -->
             <div class="nav-icons">
                 <a href="#"><i class="fas fa-search"></i></a>
                 <a href="#"><i class="fas fa-user"></i></a>
